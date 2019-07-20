@@ -57,13 +57,23 @@
         \end{flushright}
     \end{minipage}
 }
-\newcommand{\experience}[2]{
 
-    \minipagelr{0.4}{0.6}{#1}{#2}
-}
+\newcommand{\experience}[2]{\minipagelr{0.4}{0.6}{#1}{#2}}
 
 \newcommand{\header}[1]{{\noindent\huge\textbf{#1}}\hline}
 \newcommand{\newsection}[1]{\vspace{0.5cm}{\noindent\Large\textbf{#1}}\hline}
+
+\newcommand{\experiencej}[4]{
+    \noindent
+    \begin{minipage}[t]{#1\textwidth}
+        \begin{flushleft}
+            #3
+        \end{flushleft}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{#2\textwidth}
+        #4
+    \end{minipage}
+}
 
 % Configuration
 \newcommand{\frontmatterleft}{
@@ -91,11 +101,11 @@
 \frontmatter
 
 \newsection{Experience}
-\experience{
+\experiencej{0.4}{0.6}{
     Postdoctoral Researcher \\
     Computational Physics Laboratory \\
     Tampere University}{
-        Brief description of projects and responsibilites
+        Carried out simulations of nanoscale magnetic materials using a combination of open source software and code developed in-house, based on Go, CUDA, and Python. Simulations were carried out on GPUs deployed as part of \href{https://csc.fi}{CSC's} \href{https://research.csc.fi/taito-gpu}{Taito-GPU supercluster}.
     }
 
 \newsection{Education}
