@@ -8,40 +8,48 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{ifthen}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{tabularx}
+
+% To load the sweet icons in the fontawesome and academicicons package is a massive hassle. If you compile with pdflatex, fontawesome doesn't work but academicicons does. If you compile with xelatex, the Font Awesome font isn't found. I think this can be fixed by modifying the latex fontawesome.sty file to point it directly at the ttf or otf font file you want to use, like this:
+
+% \usepackage{fontspec}
+% \defaultfontfeatures{Path = /usr/local/texlive/2013/texmf-dist/fonts/opentype/public/fontawesome/ }
+
+% There is an easier alternative, give in https://tex.stackexchange.com/questions/132888/fontawesome-font-not-found: just add the lines
+
+% \usepackage{fontspec}
+% \defaultfontfeatures{Extension = .otf}
+
+% so that xelatex somehow finds the correct font file. This requires adding the fontspec package to get the \defaultfontfeatures command. Disgusting bodge.t
+
+
+\usepackage{fontspec}
+\defaultfontfeatures{Extension = .otf}
+\usepackage{fontawesome}
+\usepackage{academicons}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
 \hypersetup{
     colorlinks,
     linkcolor={red!50!black},
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
-}
+    }
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% !TEX TS-program = lualatex
+
+
+%%%%%%%%%%
+% Configure column spacing
+%%%%%%%%%%
+\newcommand{\colsizel}{0.2\textwidth}
+\newcommand{\colsizer}{0.8\textwidth}
+\newcommand{\colsizec}{0.6\textwidth}
+\newcommand{\colsizedate}{0.2\textwidth}
 
 \renewcommand{\hline}{
     \vskip\medskipamount % or other desired dimension
     \leaders\vrule width \textwidth\vskip0.4pt % or other desired thickness
     \vskip\medskipamount % ditto
     \nointerlineskip
-}
-
-
-\newcommand{\eduentry}[3]{
-    \noindent
-    \begin{minipage}[t]{0.3\textwidth}
-        \begin{flushleft}
-            #1
-        \end{flushleft}
-    \end{minipage}\hfill
-    \noindent
-    \begin{minipage}[t]{0.3\textwidth}
-        \begin{centering}
-            #2
-        \end{centering}
-    \end{minipage}\hfill
-    \begin{minipage}[t]{0.3\textwidth}
-        \begin{flushright}
-            #3
-        \end{flushright}
-    \end{minipage}
 }
 
 \newcommand{\minipagelr}[4]{
@@ -58,31 +66,31 @@
     \end{minipage}
 }
 
-\newcommand{\experience}[2]{\minipagelr{0.4}{0.6}{#1}{#2}}
-
-\newcommand{\header}[1]{{\noindent\huge\textbf{#1}}\hline}
-\newcommand{\newsection}[1]{\vspace{0.5cm}{\noindent\Large\textbf{#1}}\hline}
-
-\newcommand{\experiencej}[4]{
+\newcommand{\header}[1]{\centering{\LARGE\textbf{#1}}\hline}
+% \newcommand{\newsection}[1]{\vspace{0.5cm}{\noindent\large\textbf{#1}}\hline}
+\newcommand{\entry}[4]{
     \noindent
-    \begin{minipage}[t]{#1\textwidth}
+    \begin{minipage}[t]{\colsizel}
         \begin{flushleft}
-            #3
+            #1
         \end{flushleft}
     \end{minipage}\hfill
-    \begin{minipage}[t]{#2\textwidth}
-        #4
-    \end{minipage}
+    \begin{minipage}[t]{\colsizer}
+        \begin{flushright}
+            #3
+        \end{flushright}
+    \end{minipage}\hfill
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\frontmatterleft}{
     \href{https://scholar.google.com/citations?user=NXE8TDYAAAAJ\&hl=en}{Google Scholar} \\
     \href{https://orcid.org/0000-0003-0389-0611}{ORCID} \\
-    \href{https://github.com/peytondmurray}{GitHub}
+    \href{https://github.com/peytondmurray}{github.com/peytondmurray}
 }
-
-% Configuration
 \newcommand{\frontmatterright}{
     +1 408 761 9078 \\
     \href{peynmurray@gmail.com}{peynmurray@gmail.com} \\
@@ -97,20 +105,45 @@
 
 \begin{document}
 \header{Peyton D. Murray}
-
 \frontmatter
 
-\newsection{Experience}
-\experiencej{0.4}{0.6}{
-    Postdoctoral Researcher \\
-    Computational Physics Laboratory \\
-    Tampere University}{
-        Carried out simulations of nanoscale magnetic materials using a combination of open source software and code developed in-house, based on Go, CUDA, and Python. Simulations were carried out on GPUs deployed as part of \href{https://csc.fi}{CSC's} \href{https://research.csc.fi/taito-gpu}{Taito-GPU supercluster}.
-    }
+\verb|Facebook|: \faFacebook \quad \faFacebookSquare \par
+\verb|Twitter|: \faTwitter \quad \faTwitterSquare \par
+\verb|Github|: \faGithub \quad \faGithubSquare \par
+\verb|HTML5|: \faHtml5 \par
+\verb|LinkedIn|: \faLinkedin \quad \faLinkedinSquare \par
+\verb|Pinterest|: \faPinterest \quad \faPinterestSquare \par
+\verb|Google+|: \faGooglePlus \quad \faGooglePlusSquare\\
+\aiGoogleScholar\\
+\aiResearchGate
 
-\newsection{Education}
-\eduentry{Ph. D., Physics}{2012 $-$ 2018}{University of California, Davis}
-\eduentry{B. Sc.}{2007 $-$ 2011}{Saint Mary's College of California, Moraga \\ \emph{summa cum laude}}
+
+% \entry{Research & Experience}{
+%     Computational Physics Laboratory \\
+%     Tampere University \\
+%     \emph{Postdoctoral Researcher}}{Jan. 2019 $-$ August 2019}{
+%     \begin{itemize}
+%         \item Carried out simulations of nanoscale magnetic materials using a combination of open source software and custom-built code, developed in-house, based on Go, CUDA, and Python.
+%         \item Simulations were carried out on GPUs deployed as part of the \href{https://www.csc.fi}{CSC's} Taito-GPU supercluster.
+%     \end{itemize}
+% }
+
+
+
+% % \newsection{Experience}
+% \experience{0.4}{0.6}{
+%     Postdoctoral Researcher \\
+%     Computational Physics Laboratory \\
+%     Tampere University}{
+%         \begin{itemize}
+%             \item Carried out simulations of nanoscale magnetic materials using a combination of open source software and custom-built code, developed in-house, based on Go, CUDA, and Python.
+%             \item Simulations were carried out on GPUs deployed as part of the \href{https://www.csc.fi}{CSC's} Taito-GPU supercluster.
+%         \end{itemize}
+%     }
+
+% \newsection{Education}
+% \eduentry{Ph. D., Physics}{2012 $-$ 2018}{University of California, Davis}
+% \eduentry{B. Sc.}{2007 $-$ 2011}{Saint Mary's College of California, Moraga \\ \emph{summa cum laude}}
 
 \vspace{0.5cm}
 
