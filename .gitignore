@@ -7,3 +7,5 @@
 *.xdv
 *.bbl
 *.blg
+*.run.xml
+*.bcf

@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{ifthen}
 \usepackage{tabularx}
+\usepackage[sorting=none,style=nature]{biblatex}
 
 % To load the sweet icons in the fontawesome and academicicons package is a massive hassle. If you compile with pdflatex, fontawesome doesn't work but academicicons does. If you compile with xelatex, the Font Awesome font isn't found. I think this can be fixed by modifying the latex fontawesome.sty file to point it directly at the ttf or otf font file you want to use, like this:
 
@@ -82,14 +83,25 @@
     \end{minipage}\hfill
 }
 
+\newcommand{\bighref}[2]{\href{#1}{\LARGE{#2}}}
+
+\newcommand{\iconlinks}{
+    \bighref{https://linkedin.com/peyton-murray-b5975031}{\faLinkedinSquare \:}
+    \bighref{https://github.com/peytondmurray}{\faGithubSquare \:}
+    \bighref{https://scholar.google.com/citations?user=NXE8TDYAAAAJ\&hl=en}{\aiGoogleScholarSquare \;}
+    \bighref{https://orcid.org/0000-0003-0389-0611}{\aiOrcidSquare \;}
+    \bighref{https://researchgate.net/profile/Peyton_Murray}{\aiResearchGateSquare \;}
+    \bighref{https://mendeley.com/profiles/peyton-murray}{\aiMendeleySquare \;}
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Configuration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\frontmatterleft}{
-    \href{https://scholar.google.com/citations?user=NXE8TDYAAAAJ\&hl=en}{Google Scholar} \\
-    \href{https://orcid.org/0000-0003-0389-0611}{ORCID} \\
-    \href{https://github.com/peytondmurray}{github.com/peytondmurray}
+    \href{https://scholar.google.com/citations?user=NXE8TDYAAAAJ\&hl=en}{\aiGoogleScholar \enspace Google Scholar} \\
+    \href{https://orcid.org/0000-0003-0389-0611}{\aiOrcid \enspace ORCID} \\
+    \href{https://github.com/peytondmurray}{\faGithub \;\enspace github.com/peytondmurray}
 }
 \newcommand{\frontmatterright}{
     +1 408 761 9078 \\
@@ -102,21 +114,12 @@
     \minipagelr{0.4}{0.6}{\frontmatterleft}{\frontmatterright}
 }
 
+\bibliography{ref}
 
 \begin{document}
 \header{Peyton D. Murray}
+\iconlinks \\
 \frontmatter
-
-\verb|Facebook|: \faFacebook \quad \faFacebookSquare \par
-\verb|Twitter|: \faTwitter \quad \faTwitterSquare \par
-\verb|Github|: \faGithub \quad \faGithubSquare \par
-\verb|HTML5|: \faHtml5 \par
-\verb|LinkedIn|: \faLinkedin \quad \faLinkedinSquare \par
-\verb|Pinterest|: \faPinterest \quad \faPinterestSquare \par
-\verb|Google+|: \faGooglePlus \quad \faGooglePlusSquare\\
-\aiGoogleScholar\\
-\aiResearchGate
-
 
 % \entry{Research & Experience}{
 %     Computational Physics Laboratory \\
@@ -147,5 +150,13 @@
 
 \vspace{0.5cm}
 
+\nocite{*}
+% \bibliographystyle{numeric}
+\printbibliography
+
+% \begin{refsection}[ref]
+%     \nocite{*}
+%     \printbibliography[resetnumbers=true,sorting=ynt,title={Publications}]
+% \end{refsection}
 
 \end{document}
