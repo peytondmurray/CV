@@ -8,7 +8,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{ifthen}
-\usepackage{tabularx}
+\usepackage{tabu}
 \usepackage[sorting=none,style=nature]{biblatex}
 
 % To load the sweet icons in the fontawesome and academicicons package is a massive hassle. If you compile with pdflatex, fontawesome doesn't work but academicicons does. If you compile with xelatex, the Font Awesome font isn't found. I think this can be fixed by modifying the latex fontawesome.sty file to point it directly at the ttf or otf font file you want to use, like this:
@@ -99,9 +99,10 @@
 % Configuration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\frontmatterleft}{
-    \href{https://scholar.google.com/citations?user=NXE8TDYAAAAJ\&hl=en}{\aiGoogleScholar \enspace Google Scholar} \\
-    \href{https://orcid.org/0000-0003-0389-0611}{\aiOrcid \enspace ORCID} \\
-    \href{https://github.com/peytondmurray}{\faGithub \;\enspace github.com/peytondmurray}
+    % \href{https://scholar.google.com/citations?user=NXE8TDYAAAAJ\&hl=en}{\aiGoogleScholar \enspace Google Scholar} \\
+    % \href{https://orcid.org/0000-0003-0389-0611}{\aiOrcid \enspace ORCID} \\
+    % \href{https://github.com/peytondmurray}{\faGithub \;\enspace github.com/peytondmurray}
+    \iconlinks
 }
 \newcommand{\frontmatterright}{
     +1 408 761 9078 \\
@@ -114,12 +115,26 @@
     \minipagelr{0.4}{0.6}{\frontmatterleft}{\frontmatterright}
 }
 
+
+\newcolumntype{t}{>{\hsize=0.5}}
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
 \bibliography{ref}
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document start
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \header{Peyton D. Murray}
-\iconlinks \\
 \frontmatter
+
+% \begin{tabularx}{\textwidth}{t m d}
+\begin{tabu}
+    a & b & c
+\end{tabu}
 
 % \entry{Research & Experience}{
 %     Computational Physics Laboratory \\
