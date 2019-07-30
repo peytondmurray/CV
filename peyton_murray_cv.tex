@@ -8,6 +8,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{ifthen}
+\usepackage{longtable}
 \usepackage{tabu}
 \usepackage[sorting=none,style=nature]{biblatex}
 
@@ -41,10 +42,17 @@
 %%%%%%%%%%
 % Configure column spacing
 %%%%%%%%%%
+\newcolumntype{t}{>{\hsize=0.5}}
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
+\bibliography{ref}
+
 \newcommand{\colsizel}{0.2\textwidth}
 \newcommand{\colsizer}{0.8\textwidth}
 \newcommand{\colsizec}{0.6\textwidth}
 \newcommand{\colsizedate}{0.2\textwidth}
+
+\newcommand{\ind}{\hspace{0.5cm}}
 
 \renewcommand{\hline}{
     \vskip\medskipamount % or other desired dimension
@@ -115,14 +123,70 @@
     \minipagelr{0.4}{0.6}{\frontmatterleft}{\frontmatterright}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcolumntype{t}{>{\hsize=0.5}}
-\newcolumntype{b}{X}
-\newcolumntype{s}{>{\hsize=.5\hsize}X}
-\bibliography{ref}
+\newcommand{\eduucdavis}{
+    University of California, Davis \hfill 2012 $-$ 2018 \newline
+    \ind Ph. D. Physics: Dec 2018 \newline
+    \ind M. S. Physics: Dec 2013
+}
 
+\newcommand{\edustmarys}{
+    Saint Mary's College of California, Moraga \hfill 2007 $-$ 2011 \newline
+    \ind B. S. Physics, \emph{summa cum laude}
+}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\exptampere}{
+    Computational Physics Laboratory \hfill Jan 2019 $-$ Aug 2019 \newline
+    Tampere University \newline
+    \emph{Postdoctoral Researcher} \newline
+    Advisor: Lasse Laurson \newline
+    \vspace{-\topsep}
+    \begin{itemize}
+        \item Carried out simulations of nanoscale magnetic materials using a combination of open source software and custom-built code, developed in-house, based on Go, CUDA, and Python.
+        \item Leveraged GPUs deployed as part of the \href{https://www.csc.fi}{CSC's} Taito-GPU supercluster.
+    \end{itemize}
+}
+
+\newcommand{\expucdavis}{
+    Department of Physics \hfill 2012 $-$ 2018 \newline
+    University of California, Davis \newline
+    \emph{Graduate Student Researcher} \newline
+    Advisor: Kai Liu \newline
+    \vspace{-\topsep}
+    \begin{itemize}
+        \item Developed computational tools for analyzing magnetic behavior
+    \end{itemize}
+}
+
+\newcommand{\explbl}{
+    Physics Division \hfill 2011 $-$ 2012 \newline
+    Lawrence Berkeley National Laboratory \newline
+    \emph{Junior Specialist}, ATLAS Collaboration \newline
+    Principal Investigator: Maurice Garcia-Sciveres \newline
+    \vspace{-\topsep}
+    \begin{itemize}
+        \item Part of <largest scientific collaboration, international>
+        \item Responsible for testing prototype silicon-pixel readout chips for a next-generation particle tracking detector.
+    \end{itemize}
+}
+
+\newcommand{\expalfalfa}{
+    Physics Department 2010 $-$ 2011 \newline
+    Saint Mary's College of California, Moraga \newline
+    \emph{Research Assistant}, ALFALFA Collaboration \newline
+    Advisor: Ron Olowin \newline
+    \vspace{-\topsep}
+    \begin{itemize}
+        \item International collaboration conducting galactic and extragalactic radio astronomy observations
+    \end{itemize}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Document start
@@ -131,47 +195,19 @@
 \header{Peyton D. Murray}
 \frontmatter
 
-% \begin{tabularx}{\textwidth}{t m d}
-\begin{tabu}
-    a & b & c
-\end{tabu}
+\begin{longtabu} to \textwidth{X[1.2] X[7]}
+    \textbf{Education} & \eduucdavis \\ & \\
+    & \edustmarys
+\end{longtabu}
 
-% \entry{Research & Experience}{
-%     Computational Physics Laboratory \\
-%     Tampere University \\
-%     \emph{Postdoctoral Researcher}}{Jan. 2019 $-$ August 2019}{
-%     \begin{itemize}
-%         \item Carried out simulations of nanoscale magnetic materials using a combination of open source software and custom-built code, developed in-house, based on Go, CUDA, and Python.
-%         \item Simulations were carried out on GPUs deployed as part of the \href{https://www.csc.fi}{CSC's} Taito-GPU supercluster.
-%     \end{itemize}
-% }
-
-
-
-% % \newsection{Experience}
-% \experience{0.4}{0.6}{
-%     Postdoctoral Researcher \\
-%     Computational Physics Laboratory \\
-%     Tampere University}{
-%         \begin{itemize}
-%             \item Carried out simulations of nanoscale magnetic materials using a combination of open source software and custom-built code, developed in-house, based on Go, CUDA, and Python.
-%             \item Simulations were carried out on GPUs deployed as part of the \href{https://www.csc.fi}{CSC's} Taito-GPU supercluster.
-%         \end{itemize}
-%     }
-
-% \newsection{Education}
-% \eduentry{Ph. D., Physics}{2012 $-$ 2018}{University of California, Davis}
-% \eduentry{B. Sc.}{2007 $-$ 2011}{Saint Mary's College of California, Moraga \\ \emph{summa cum laude}}
+\begin{longtabu} to \textwidth{X[1.2] X[7]}
+    \textbf{Research \newline\& Experience} & \exptampere \\
+    & \expucdavis
+\end{longtabu}
 
 \vspace{0.5cm}
 
 \nocite{*}
-% \bibliographystyle{numeric}
-\printbibliography
-
-% \begin{refsection}[ref]
-%     \nocite{*}
-%     \printbibliography[resetnumbers=true,sorting=ynt,title={Publications}]
-% \end{refsection}
+\printbibliography[title={Publications}]
 
 \end{document}
