@@ -10,6 +10,7 @@
 \usepackage{ifthen}
 \usepackage{longtable}
 \usepackage{tabu}
+\usepackage{todonotes}
 \usepackage[sorting=none,style=nature]{biblatex}
 
 % To load the sweet icons in the fontawesome and academicicons package is a massive hassle. If you compile with pdflatex, fontawesome doesn't work but academicicons does. If you compile with xelatex, the Font Awesome font isn't found. I think this can be fixed by modifying the latex fontawesome.sty file to point it directly at the ttf or otf font file you want to use, like this:
@@ -52,7 +53,7 @@
 \newcommand{\colsizec}{0.6\textwidth}
 \newcommand{\colsizedate}{0.2\textwidth}
 
-\newcommand{\ind}{\hspace{0.5cm}}
+\newcommand{\ind}{\phantom{\hspace{0.5cm}}}
 
 \renewcommand{\hline}{
     \vskip\medskipamount % or other desired dimension
@@ -143,13 +144,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\exptampere}{
-    Computational Physics Laboratory \hfill Jan 2019 $-$ Aug 2019 \newline
+    Computational Physics Laboratory \hfill Jan 2019 $-$ Present \newline
     Tampere University \newline
     \emph{Postdoctoral Researcher} \newline
     Advisor: Lasse Laurson \newline
-    \vspace{-\topsep}
+    \vspace{-2\topsep}
     \begin{itemize}
-        \item Carried out simulations of nanoscale magnetic materials using a combination of open source software and custom-built code, developed in-house, based on Go, CUDA, and Python.
+        \item Carried out simulations of nanoscale magnetic materials using a combination of open source software and  in-house code (Go, CUDA, and Python).
         \item Leveraged GPUs deployed as part of the \href{https://www.csc.fi}{CSC's} Taito-GPU supercluster.
     \end{itemize}
 }
@@ -159,30 +160,32 @@
     University of California, Davis \newline
     \emph{Graduate Student Researcher} \newline
     Advisor: Kai Liu \newline
-    \vspace{-\topsep}
+    \vspace{-2\topsep}
     \begin{itemize}
-        \item Developed computational tools for analyzing magnetic behavior
+        \item Developed open source tools for analyzing and visualizing magnetic measurements using the First-Order Reversal-Curves (FORC) technique (Python).
+        \item 
     \end{itemize}
 }
 
 \newcommand{\explbl}{
     Physics Division \hfill 2011 $-$ 2012 \newline
     Lawrence Berkeley National Laboratory \newline
-    \emph{Junior Specialist}, ATLAS Collaboration \newline
+    \emph{Junior Specialist}, \href{https://atlas.cern/}{ATLAS Experiment} \newline
     Principal Investigator: Maurice Garcia-Sciveres \newline
-    \vspace{-\topsep}
+    \vspace{-2\topsep}
     \begin{itemize}
-        \item Part of <largest scientific collaboration, international>
-        \item Responsible for testing prototype silicon-pixel readout chips for a next-generation particle tracking detector.
+        \item Tested next-generation hardware developed for tracking the trajectories of charged particles at the \href{https://home.cern/science/accelerators/large-hadron-collider}{Large Hadron Collider} (LHC), the largest particle physics experiment in the world.
+        \item Developed system control GUI and backend for an integrated circuit tester (C++ and Qt). These tools allowed for automated testing of hundreds of chips (entire wafers) at a time, greatly increasing throughput.
+        \item These chips \href{https://atlas.cern/updates/atlas-news/new-sub-detector-atlas}{were installed} as part of the Insertable B-Layer system at the Large Hadron Collider in 2014\cite{Collaboration2012}.
     \end{itemize}
 }
 
 \newcommand{\expalfalfa}{
-    Physics Department 2010 $-$ 2011 \newline
+    Physics Department \hfill 2010 $-$ 2011 \newline
     Saint Mary's College of California, Moraga \newline
     \emph{Research Assistant}, ALFALFA Collaboration \newline
     Advisor: Ron Olowin \newline
-    \vspace{-\topsep}
+    \vspace{-2\topsep}
     \begin{itemize}
         \item International collaboration conducting galactic and extragalactic radio astronomy observations
     \end{itemize}
@@ -192,17 +195,40 @@
 % Document start
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
 \header{Peyton D. Murray}
 \frontmatter
 
+\begin{longtabu} to \textwidth{X[1.2] X[7]}
+    \textbf{Computing} & Python (proficient), C++ (intermediate), Go (intermediate), Bash (intermediate), CUDA (intermediate), Git (proficient), SQL (basic)
+\end{longtabu}
+
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[1.2] X[7]}
+    \textbf{Skills} & Simulation, Time Series, Linux, Data Analysis, Statistics, Data Visualizations, Python Data Ecosystem (numpy, scipy, matplotlib, pandas, dask, ...), HPC, Distributed Computing, VTK.
+\end{longtabu}
+
+\vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[1.2] X[7]}
     \textbf{Education} & \eduucdavis \\ & \\
     & \edustmarys
 \end{longtabu}
 
+\vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[1.2] X[7]}
     \textbf{Research \newline\& Experience} & \exptampere \\
-    & \expucdavis
+    & \expucdavis \\
+    & \explbl \\
+    & \expalfalfa
+\end{longtabu}
+
+\pagebreak
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[1.2] X[7]}
+    \textbf{Teaching} & Teaching Assistant \hfill 2012 $-$ 2016 \newline
+    Department of Physics, University of California, Davis \\
+    & Student Tutor and Live-In Mentor \hfill 2010 $-$ 2011 \newline
+    Physics Department, Saint Mary's College of California, Moraga 
 \end{longtabu}
 
 \vspace{0.5cm}
