@@ -44,6 +44,9 @@
     }
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% !TEX TS-program = lualatex
 
+\DeclareFieldFormat[article]{title}{\textbf{#1}}
+% \DeclareFieldFormat{labelnumberwidth}{}
+% \setlength{\biblabelsep}{0pt}
 \definecolor{darkblue}{HTML}{2052be}
 \pagenumbering{gobble}
 %%%%%%%%%%
@@ -54,13 +57,8 @@
 \newcolumntype{s}{>{\hsize=.5\hsize}X}
 \bibliography{ref}
 
-\newcommand{\colsizel}{0.2\textwidth}
-\newcommand{\colsizer}{0.8\textwidth}
-\newcommand{\colsizec}{0.6\textwidth}
-\newcommand{\colsizedate}{0.2\textwidth}
-
-% \tabulinesep = 0mm
-% \extrarowsep = -3mm
+\newcommand{\coll}{1.2}
+\newcommand{\colr}{8}
 
 \newcommand{\ind}[1]{
     \begin{adjustwidth}{0.5cm}{0.5cm}
@@ -93,22 +91,8 @@
     \end{minipage}
 }
 
-\newcommand{\header}[1]{\centering{\LARGE\textbf{#1}}\hline}
-% \newcommand{\newsection}[1]{\vspace{0.5cm}{\noindent\large\textbf{#1}}\hline}
-\newcommand{\entry}[4]{
-    \noindent
-    \begin{minipage}[t]{\colsizel}
-        \begin{flushleft}
-            #1
-        \end{flushleft}
-    \end{minipage}\hfill
-    \begin{minipage}[t]{\colsizer}
-        \begin{flushright}
-            #3
-        \end{flushright}
-    \end{minipage}\hfill
-}
 
+% \newcommand{\newsection}[1]{\vspace{0.5cm}{\noindent\large\textbf{#1}}\hline}
 \newcommand{\bighref}[2]{\href{#1}{\color{darkblue}\LARGE{#2}}}
 
 \newcommand{\iconlinks}{
@@ -120,25 +104,19 @@
     \bighref{https://mendeley.com/profiles/peyton-murray}{\aiMendeleySquare \;}
 }
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Configuration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\frontmatterleft}{
-    % \href{https://scholar.google.com/citations?user=NXE8TDYAAAAJ\&hl=en}{\aiGoogleScholar \enspace Google Scholar} \\
-    % \href{https://orcid.org/0000-0003-0389-0611}{\aiOrcid \enspace ORCID} \\
-    % \href{https://github.com/peytondmurray}{\faGithub \;\enspace github.com/peytondmurray}
-    \iconlinks
-}
-\newcommand{\frontmatterright}{
-    +1 408 761 9078 \\
-    \href{peynmurray@gmail.com}{peynmurray@gmail.com} \\
-    \href{peytondmurray.github.io}{peytondmurray.github.io}
+\newcommand{\contact}{
+    \vspace{-0.5cm}
+    \begin{longtabu} to \textwidth{X[1,l] X[1,c] X[1,r]}
+        Tel: +1 408 761 9078 & \href{peytondmurray.github.io}{peytondmurray.github.io} & \href{peynmurray@gmail.com}{peynmurray@gmail.com}
+    \end{longtabu}
 }
 
-% Final setup
-\newcommand{\frontmatter}{
-    \minipagelr{0.4}{0.6}{\frontmatterleft}{\frontmatterright}
+\newcommand{\header}[1]{
+    {\LARGE\textbf{#1}} \hfill \iconlinks
+    \hline
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -161,7 +139,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\exptampere}{
-    Computational Physics Laboratory, Tampere University, Finland \hfill Jan 2019 $-$ Present \newline
+    \textbf{Computational Physics Laboratory, Tampere University}, Finland \hfill Jan 2019 $-$ Present \newline
     \indsp \emph{Postdoctoral Researcher} \newline
     \indsp Advisor: Lasse Laurson \newline
     \vspace{-2\topsep}
@@ -172,19 +150,19 @@
 }
 
 \newcommand{\expucdavis}{
-    Department of Physics, University of California, Davis \hfill 2012 $-$ 2018 \newline
+    \textbf{Department of Physics, University of California, Davis} \hfill 2012 $-$ 2018 \newline
     \indsp \emph{Graduate Student Researcher} \newline
     \indsp Advisor: Kai Liu \newline
     \vspace{-2\topsep}
     \begin{itemize}[leftmargin=1cm]
-        \item Fabricated and characterized a wide variety of nanoscale magnetic materials using multiple techniques.
         \item Developed \href{https://github.com/peytondmurray/PyFORC}{PyFORC}, a suite of open source tools for analyzing and visualizing magnetic measurements using the First-Order Reversal-Curves (FORC) technique (Python).
-        \item Instrument control software
+        \item Programmed data acquisition and instrument control software for laboratory equipment, including sputter-deposition power supplies and multimeters.
+        \item Fabricated and characterized a wide range of nanoscale magnetic materials, including nanoparticles, thin films, single crystals, and patterned nanostructures, using a variety of cutting-edge techniques.
     \end{itemize}
 }
 
 \newcommand{\explbl}{
-    Physics Division, Lawrence Berkeley National Laboratory \hfill 2011 $-$ 2012 \newline
+    \textbf{Physics Division, Lawrence Berkeley National Laboratory}, Berkeley, CA \hfill 2011 $-$ 2012 \newline
     \indsp \emph{Junior Specialist}, \href{https://atlas.cern/}{ATLAS Experiment} \newline
     \indsp Principal Investigator: Maurice Garcia-Sciveres \newline
     \vspace{-2\topsep}
@@ -196,7 +174,7 @@
 }
 
 \newcommand{\expalfalfa}{
-    Physics Department, Saint Mary's College of California, Moraga \hfill 2010 $-$ 2011 \newline
+    \textbf{Physics Department, Saint Mary's College of California}, Moraga \hfill 2010 $-$ 2011 \newline
     \indsp \emph{Research Assistant}, \href{http://egg.astro.cornell.edu/index.php/}{ALFALFA Collaboration} \newline
     \indsp Advisor: Ron Olowin \newline
     \vspace{-2\topsep}
@@ -209,21 +187,12 @@
 % Document start
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
+\nocite{*}
 \header{Peyton D. Murray}
-\frontmatter
-
-\begin{longtabu} to \textwidth{X[1.2] X[7]}
-    \textbf{Computing} & Python (proficient), C++ (intermediate), Go (intermediate), Bash (intermediate), CUDA (intermediate), Git (proficient), SQL (basic)
-\end{longtabu}
+\contact
 
 \vspace{-0.5cm}
-\begin{longtabu} to \textwidth{X[1.2] X[7]}
-    \textbf{Skills} & Simulations, Data Analysis, Statistics, Data Visualization, Linux, Python Data \& Visualization Ecosystem (numpy, scipy, pandas, dask, matplotlib, bokeh, pyqtgraph, ...), HPC, Distributed Computing, VTK.
-\end{longtabu}
-
-\vspace{-0.5cm}
-\begin{longtabu} to \textwidth{X[1.2] X[7]}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
     \textbf{Education} & University of California, Davis \hfill 2012 $-$ 2018 \newline
     \indsp {Ph. D. Physics: Dec 2018} \newline
     \indsp {M. S. Physics: Dec 2013} \\
@@ -233,7 +202,17 @@
 \end{longtabu}
 
 \vspace{-0.5cm}
-\begin{longtabu} to \textwidth{X[1.2] X[7]}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Computing} & Python (proficient), C++ (intermediate), Go (intermediate), Bash (intermediate), CUDA (intermediate), Git (proficient)
+\end{longtabu}
+
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Skills} & Simulations, Data Analysis, Statistics, Data Visualization, Linux, Python Data \& Visualization Ecosystem (numpy, scipy, pandas, dask, matplotlib, bokeh, pyqtgraph, ...), HPC, Distributed Computing, VTK.
+\end{longtabu}
+
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
     \textbf{Research \newline\& Experience} & \exptampere \\
     & \expucdavis \\
     & \explbl \\
@@ -241,17 +220,13 @@
 \end{longtabu}
 
 \vspace{-0.5cm}
-\begin{longtabu} to \textwidth{X[1.2] X[7]}
-    \textbf{Teaching} & Teaching Assistant \hfill 2012 $-$ 2016 \newline
-    \vspace{-3mm}
-    \ind{Department of Physics, University of California, Davis} \\
-    & Student Tutor and Live-In Mentor \hfill 2010 $-$ 2011 \newline
-    \vspace{-3mm}
-    \ind{Physics Department, Saint Mary's College of California, Moraga} 
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Teaching} & \emph{Teaching Assistant}, \textbf{Dept. of Physics, University of California, Davis} \hfill 2012 $-$ 2016 \\
+    & \emph{Student Tutor and Live-In Mentor}, \textbf{Physics Dept., St. Mary's College of California} \hfill 2010 $-$ 2011
 \end{longtabu}
 
 \vspace{-0.5cm}
-\begin{longtabu} to \textwidth{X[1.2] X[7]}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
     \textbf{Laboratory Skills} & \emph{Fabrication} \newline
     \vspace{-3mm}
     \ind{Sputtering, e-beam evaporation, and e-beam-/photo-lithography and lift-off.} \\
@@ -263,9 +238,20 @@
     \ind{X-ray diffraction (XRD), reciprocal space mapping (RSM), scanning electron microscopy (SEM), polarized neutron reflectometry (PNR), x-ray absorption spectroscopy (XAS) and magnetic circular dichroism (XMCD), and Hall effect and van der Pauw resistivity methods.}
 \end{longtabu}
 
-\vspace{0.5cm}
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Publications} & \vspace{-0.55cm}\printbibliography[heading=none]    
+\end{longtabu}
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Selected \newline Conferences} & P. D. Murray. \textbf{Invited colloquium:} \emph{Tuning Ionic Distributions for Multifunctional Materials}. Tampere University, Tampere, Finland (2019). \newline
+    
+    P. D. Murray, D. A. Gilbert, A. J. Grutter, B. J. Kirby, D. Hernandez-Maldonado, M. Varela, Z. E. Brubaker, R. V. Chopdekar, V. Taufour, R. Zieve, J. R. Jeffries, E. Arenholz, Y. Takamura, J. Borchers, and K. Liu. \textbf{Poster:} \emph{Interfacial-Redox-Induced Tuning of Superconductivity in YBa$_2$Cu$_3$O$_{7-\delta}$}. International Conference on Magnetism and Magnetic Materials, San Francisco, CA (2018). \newline
 
-\nocite{*}
-\printbibliography[title={Publications}]
+    P. D. Murray, Z. Chen, D. A. Gilbert, J. Zang, T. Stückler, K. Lenz, B. B. Maranville J. Fassbender, H. Yu, J. Borchers, and K. Liu. \textbf{Poster:} \emph{Topological Hall Effect in Planar Artificial Skyrmion Lattices}. Conference on Magnetism and Magnetic Materials, Pittsburgh, PA (2017). \newline
+
+    P. D. Murray, D. A. Gilbert, A. J. Grutter, A. L. Ionin, R. V. Chopdekar, A. T. N’Diaye, B. J. Kirby, B. B. Maranville, Y. Takamura, E. Arenholz, K. Liu, and J. Borchers. \textbf{Talk:} \emph{Complete Suppression of Magnetism in Gd/(La,Sr)CoO$_3$ Films via Redox Design of Oxygen Distributions}. Conference on Magnetism and Magnetic Materials, New Orleans, LA (2016). \newline
+
+\end{longtabu}
 
 \end{document}
