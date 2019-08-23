@@ -1,0 +1,225 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{ifthen}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{changepage}
+\usepackage{enumitem}
+\usepackage[backend=biber,
+    sorting=none,
+    style=nature,
+    url=false,
+    doi=true]{biblatex}
+
+% To load the sweet icons in the fontawesome and academicicons package is a massive hassle. If you compile with pdflatex, fontawesome doesn't work but academicicons does. If you compile with xelatex, the Font Awesome font isn't found. I think this can be fixed by modifying the latex fontawesome.sty file to point it directly at the ttf or otf font file you want to use, like this:
+
+% \usepackage{fontspec}
+% \defaultfontfeatures{Path = /usr/local/texlive/2013/texmf-dist/fonts/opentype/public/fontawesome/ }
+
+% There is an easier alternative, give in https://tex.stackexchange.com/questions/132888/fontawesome-font-not-found: just add the lines
+
+% \usepackage{fontspec}
+% \defaultfontfeatures{Extension = .otf}
+
+% so that xelatex somehow finds the correct font file. This requires adding the fontspec package to get the \defaultfontfeatures command. Disgusting bodge.t
+
+
+\usepackage{fontspec}
+\defaultfontfeatures{Extension = .otf}
+\usepackage{fontawesome}
+\usepackage{academicons}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+    }
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% !TEX TS-program = lualatex
+
+\DeclareFieldFormat[article]{title}{\textbf{#1}}
+% \DeclareFieldFormat{labelnumberwidth}{}
+% \setlength{\biblabelsep}{0pt}
+\definecolor{darkblue}{HTML}{2052be}
+\pagenumbering{gobble}
+%%%%%%%%%%
+% Configure column spacing
+%%%%%%%%%%
+\newcolumntype{t}{>{\hsize=0.5}}
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
+\bibliography{ref}
+
+\newcommand{\coll}{1.2}
+\newcommand{\colr}{8}
+
+\newcommand{\ind}[1]{
+    \begin{adjustwidth}{0.5cm}{0.5cm}
+        #1
+    \end{adjustwidth}
+}
+
+\newcommand{\indsp}{
+    \phantom{\hspace{0.5cm}}
+}
+
+\renewcommand{\hline}{
+    \vskip\medskipamount % or other desired dimension
+    \leaders\vrule width \textwidth\vskip0.4pt % or other desired thickness
+    \vskip\medskipamount % ditto
+    \nointerlineskip
+}
+
+\newcommand{\minipagelr}[4]{
+    \noindent
+    \begin{minipage}[t]{#1\textwidth}
+        \begin{flushleft}
+            #3
+        \end{flushleft}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{#2\textwidth}
+        \begin{flushright}
+            #4
+        \end{flushright}
+    \end{minipage}
+}
+
+
+% \newcommand{\newsection}[1]{\vspace{0.5cm}{\noindent\large\textbf{#1}}\hline}
+\newcommand{\bighref}[2]{\href{#1}{\color{darkblue}\LARGE{#2}}}
+
+\newcommand{\iconlinks}{
+    \bighref{https://linkedin.com/peyton-murray-b5975031}{\faLinkedinSquare \:}
+    \bighref{https://github.com/peytondmurray}{\faGithubSquare \:}
+    \bighref{https://scholar.google.com/citations?user=NXE8TDYAAAAJ\&hl=en}{\aiGoogleScholarSquare \;}
+    \bighref{https://orcid.org/0000-0003-0389-0611}{\aiOrcidSquare \;}
+    \bighref{https://researchgate.net/profile/Peyton_Murray}{\aiResearchGateSquare \;}
+    \bighref{https://mendeley.com/profiles/peyton-murray}{\aiMendeleySquare \;}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\contact}{
+    \vspace{-0.5cm}
+    \begin{longtabu} to \textwidth{X[1,l] X[1,c] X[1,r]}
+        Tel: +1 408 761 9078 & \href{https://peytondmurray.github.io}{peytondmurray.github.io} & \href{mailto:peynmurray@gmail.com}{peynmurray@gmail.com}
+    \end{longtabu}
+}
+
+\newcommand{\header}[1]{
+    {\LARGE\textbf{#1}} \hfill \iconlinks
+    \hline
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\eduucdavis}{
+    University of California, Davis \hfill 2012 $-$ 2018 \newline
+    \ind{Ph. D. Physics: Dec 2018} \newline
+    \ind{M. S. Physics: Dec 2013}
+}
+
+\newcommand{\edustmarys}{
+    Saint Mary's College of California, Moraga \hfill 2007 $-$ 2011 \newline
+    \ind{B. S. Physics, \emph{summa cum laude}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\exptampere}{
+    \textbf{Computational Physics Laboratory, Tampere University}, Finland \hfill Jan 2019 $-$ Present \newline
+    \indsp \emph{Postdoctoral Researcher} \newline
+    \vspace{-2\topsep}
+    \begin{itemize}[leftmargin=1cm]
+        \item Simulated nanoscale magnetic materials using a combination of open source software and in-house code (Go, CUDA, and Python) on GPU cluster. Numerical calculations of domain wall motion were compared to an analytic model \cite{Skaugen2019}.
+    \end{itemize}
+}
+
+\newcommand{\expucdavis}{
+    \textbf{Department of Physics, University of California, Davis} \hfill 2012 $-$ 2018 \newline
+    \indsp \emph{Graduate Student Researcher} \newline
+    \vspace{-2\topsep}
+    \begin{itemize}[leftmargin=1cm]
+        \item Fabricated and characterized a wide range of nanoscale magnetic materials, including nanoparticles, thin films, single crystals, and patterned nanostructures using a variety of cutting-edge techniques. Programmed data acquisition and instrument control software for laboratory equipment, including sputter-deposition power supplies and multimeters.
+        \item Developed \href{https://github.com/peytondmurray/PyFORC}{PyFORC}, a suite of open source tools for analyzing and visualizing magnetic measurements using the First-Order Reversal-Curves (FORC) technique (Python). Time required to go from raw data to publication quality plot was reduced by a factor of $\sim 10$ compared to previous software.
+    \end{itemize}
+}
+
+\newcommand{\explbl}{
+    \textbf{Physics Division, Lawrence Berkeley National Laboratory}, Berkeley, CA \hfill 2011 $-$ 2012 \newline
+    \indsp \emph{Junior Specialist}, \href{https://atlas.cern/}{ATLAS Experiment} \newline
+    \vspace{-2\topsep}
+    \begin{itemize}[leftmargin=1cm]
+        \item Tested prototype next-generation hardware developed for tracking the trajectories of charged particles at the \href{https://home.cern/science/accelerators/large-hadron-collider}{Large Hadron Collider}. Developed system control GUI and backend for an integrated circuit tester (C++ and Qt; version control with SVN). These tools allowed for automated testing of hundreds of chips (entire wafers) at a time, greatly increasing throughput. Chips which passed tests \href{https://atlas.cern/updates/atlas-news/new-sub-detector-atlas}{were installed} as part of the Insertable B-Layer system at the LHC in 2014, enabling continued studies of the Higgs boson.
+    \end{itemize}
+}
+
+\newcommand{\expalfalfa}{
+    \textbf{Physics Department, Saint Mary's College of California}, Moraga \hfill 2010 $-$ 2011 \newline
+    \indsp \emph{Research Assistant}, \href{http://egg.astro.cornell.edu/index.php/}{ALFALFA Collaboration} \newline
+    \indsp Advisor: Ron Olowin \newline
+    \vspace{-2\topsep}
+    \begin{itemize}[leftmargin=1cm]
+        \item Classified galactic and extragalactic astronomical observations as part of the Arecibo Legacy Fast-ALFA (ALFALFA) project, an international collaboration of astronomers based at the \href{https://naic.edu/ao/landing}{Arecibo Radio Observatory} in Puerto Rico.
+    \end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document start
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\nocite{*}
+\header{Peyton D. Murray}
+\contact
+
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Education} & University of California, Davis \hfill 2012 $-$ 2018 \newline
+    \indsp {Ph. D. Physics: Dec 2018} \newline
+    \indsp {M. S. Physics: Dec 2013} \\
+    & \\
+    & Saint Mary's College of California, Moraga \hfill 2007 $-$ 2011 \newline
+    \indsp {B. S. Physics, Minor: Mathematics, \emph{summa cum laude}}
+\end{longtabu}
+
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Computing} & Python (proficient), C++ (intermediate), Go (intermediate), Bash (intermediate), CUDA (intermediate), Git (proficient)
+\end{longtabu}
+
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Skills} & Simulations, Data Analysis, Statistics, Data Visualization, Linux, Python Data \& Visualization Ecosystem (numpy, scipy, pandas, dask, matplotlib, bokeh, pyqtgraph, ...), HPC, Distributed Computing, VTK, Jekyll.
+\end{longtabu}
+
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Research \newline\& Experience} & \exptampere \\
+    & \expucdavis \\
+    & \explbl \\
+    & \expalfalfa
+\end{longtabu}
+
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Teaching} & \emph{Teaching Assistant}, \textbf{Dept. of Physics, University of California, Davis} \hfill 2012 $-$ 2016 \\
+    & \emph{Student Tutor and Live-In Mentor}, \textbf{Physics Dept., St. Mary's College of California} \hfill 2010 $-$ 2011
+\end{longtabu}
+
+\centering\emph{Publications, selected conferences, and laboratory skills are listed on the extended CV \href{https://github.com/peytondmurray/CV/raw/master/peyton_murray_cv.pdf}{on my website}.}
+
+
+
+\end{document}
