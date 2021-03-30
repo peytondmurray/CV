@@ -12,11 +12,13 @@
 \usepackage{tabu}
 \usepackage{changepage}
 \usepackage{enumitem}
-\usepackage[backend=biber,
-    sorting=none,
+\usepackage[
+    %backend=biber,
+    sorting=ydnt,
     style=nature,
     url=false,
-    doi=true]{biblatex}
+    doi=true
+]{biblatex}
 
 % To load the sweet icons in the fontawesome and academicicons package is a massive hassle. If you compile with pdflatex, fontawesome doesn't work but academicicons does. If you compile with xelatex, the Font Awesome font isn't found. I think this can be fixed by modifying the latex fontawesome.sty file to point it directly at the ttf or otf font file you want to use, like this:
 
@@ -123,31 +125,44 @@
 % Experience
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\exptampere}{
-    \textbf{Computational Physics Laboratory, Tampere University}, Finland \hfill Jan 2019 $-$ Present \newline
-    \indsp \emph{Postdoctoral Researcher} \newline
+\newcommand{\expvoltaiq}{
+    \textbf{Voltaiq}, Berkeley, CA \hfill Oct 2019 $-$ Present \newline
+    \indsp \emph{Software Engineer} \newline
     \vspace{-2\topsep}
     \begin{itemize}[leftmargin=1cm]
-        \item Simulated nanoscale magnetic materials using a combination of open source software and in-house code (Go, CUDA, and Python) on GPU cluster. Numerical calculations of domain wall motion were compared to an analytic model \cite{Skaugen2019}.
+        \item Developed and deployed bespoke, modern, and production-quality data analysis and visualization tools to provide quantitative insight into battery performance for some of the world's largest battery manufacturers using Django (with Django REST Framework), Plotly.js, and React.
+    \end{itemize}
+}
+
+\newcommand{\exptampere}{
+    \textbf{Computational Physics Laboratory, Tampere University}, Finland \hfill Jan 2019 $-$ Aug 2019 \newline
+    \indsp \emph{Postdoctoral Researcher} \newline
+    \indsp Advisor: Lasse Laurson \newline
+    \vspace{-2\topsep}
+    \begin{itemize}[leftmargin=1cm]
+        \item Simulated nanoscale magnetic materials on the \href{https://www.csc.fi}{CSC's} Taito-GPU supercluster using a combination of open source software and in-house code (Go, CUDA, and Python). Numerical calculations of domain wall motion were compared to an analytic model \cite{Skaugen2019}.
     \end{itemize}
 }
 
 \newcommand{\expucdavis}{
     \textbf{Department of Physics, University of California, Davis} \hfill 2012 $-$ 2018 \newline
     \indsp \emph{Graduate Student Researcher} \newline
+    \indsp Advisor: Kai Liu \newline
     \vspace{-2\topsep}
     \begin{itemize}[leftmargin=1cm]
-        \item Fabricated and characterized a wide range of nanoscale magnetic materials, including nanoparticles, thin films, single crystals, and patterned nanostructures using a variety of cutting-edge techniques. Programmed data acquisition and instrument control software for laboratory equipment, including sputter-deposition power supplies and multimeters.
-        \item Developed \href{https://github.com/peytondmurray/PyFORC}{PyFORC}, a suite of open source tools for analyzing and visualizing magnetic measurements using the First-Order Reversal-Curves (FORC) technique (Python). Time required to go from raw data to publication quality plot was reduced by a factor of $\sim 10$ compared to previous software.
+        \item Developed \href{https://github.com/peytondmurray/PyFORC}{PyFORC}, a suite of open source tools for analyzing and visualizing magnetic measurements using the First-Order Reversal-Curves (FORC) technique (Python).
+        \item Streamlined the Liu group's material analysis pipeline by developing \href{https://github.com/peytondmurray/tarmac}{tarmac}, a Python library for quickly visualizing Markov-chain monte carlo (MCMC) samples. This library makes it simple to identify correlations between parameters in a statistical model and evaluate convergence during fitting.
+        \item Fabricated and characterized a wide range of nanoscale magnetic materials, including nanoparticles, thin films, single crystals, and patterned nanostructures using a variety of cutting-edge techniques. Programmed data acquisition and instrument control software for crucial laboratory equipment.
     \end{itemize}
 }
 
 \newcommand{\explbl}{
     \textbf{Physics Division, Lawrence Berkeley National Laboratory}, Berkeley, CA \hfill 2011 $-$ 2012 \newline
     \indsp \emph{Junior Specialist}, \href{https://atlas.cern/}{ATLAS Experiment} \newline
+    \indsp Principal Investigator: Maurice Garcia-Sciveres \newline
     \vspace{-2\topsep}
     \begin{itemize}[leftmargin=1cm]
-        \item Tested prototype next-generation hardware developed for tracking the trajectories of charged particles at the \href{https://home.cern/science/accelerators/large-hadron-collider}{Large Hadron Collider}. Developed system control GUI and backend for an integrated circuit tester (C++ and Qt; version control with SVN). These tools allowed for automated testing of hundreds of chips (entire wafers) at a time, greatly increasing throughput. Chips which passed tests \href{https://atlas.cern/updates/atlas-news/new-sub-detector-atlas}{were installed} as part of the Insertable B-Layer system at the LHC in 2014, enabling continued studies of the Higgs boson.
+        \item Developed system control software for an integrated circuit tester (C++ with Qt GUI; version control with SVN), allowing for automated testing of hundreds of chips at a time, greatly increasing throughput. Chips which passed tests \href{https://atlas.cern/updates/atlas-news/new-sub-detector-atlas}{were installed} as part of the Insertable B-Layer system at the LHC in 2014, enabling continued studies of the Higgs boson \cite{Collaboration2012}.
     \end{itemize}
 }
 
@@ -181,17 +196,18 @@
 
 \vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Computing} & Python (proficient), C++ (intermediate), Go (intermediate), Bash (intermediate), CUDA (intermediate), Git (proficient)
+    \textbf{Computing} & Python (proficient), C++ (intermediate), Go (intermediate), Javascript (intermediate), CUDA (intermediate). Git, Python scientific/data vis stack (scipy [contributor], numpy, matplotlib, ...). Web development with Django (and Django REST), React+Redux, AngularJS.
 \end{longtabu}
 
 \vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Skills} & Simulations, Data Analysis, Statistics, Data Visualization, Linux, Python Data \& Visualization Ecosystem (numpy, scipy, pandas, dask, matplotlib, ...), HPC, Distributed Computing, VTK, Jekyll.
+    \textbf{Skills} & Agile development, Simulations, Data Analysis, Statistics, Data Visualization, Linux, HPC (slurm), Distributed Computing, VTK, Jekyll.
 \end{longtabu}
 
 \vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Research \newline\& Experience} & \exptampere \\
+    \textbf{Research \newline\& Experience} & \expvoltaiq \\
+    & \exptampere \\
     & \expucdavis \\
     & \explbl \\
     & \expalfalfa

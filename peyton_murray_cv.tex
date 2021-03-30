@@ -12,11 +12,13 @@
 \usepackage{tabu}
 \usepackage{changepage}
 \usepackage{enumitem}
-\usepackage[backend=biber,
-    sorting=none,
+\usepackage[
+    %backend=biber,
+    sorting=ydnt,
     style=nature,
     url=false,
-    doi=true]{biblatex}
+    doi=true
+]{biblatex}
 
 % To load the sweet icons in the fontawesome and academicicons package is a massive hassle. If you compile with pdflatex, fontawesome doesn't work but academicicons does. If you compile with xelatex, the Font Awesome font isn't found. I think this can be fixed by modifying the latex fontawesome.sty file to point it directly at the ttf or otf font file you want to use, like this:
 
@@ -124,7 +126,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\expvoltaiq}{
-    \textbf{Voltaiq} \hfill Oct 2019 $-$ Present \newline
+    \textbf{Voltaiq}, Berkeley, CA \hfill Oct 2019 $-$ Present \newline
     \indsp \emph{Software Engineer} \newline
     \vspace{-2\topsep}
     \begin{itemize}[leftmargin=1cm]
@@ -197,17 +199,17 @@
 
 \vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Computing} & Python (proficient), C++ (intermediate), Go (intermediate), Javascript (intermediate), CUDA (intermediate), Git (proficient)
+    \textbf{Computing} & Python (proficient), C++ (intermediate), Go (intermediate), Javascript (intermediate), CUDA (intermediate)
 \end{longtabu}
 
 \vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Technologies} & Python scientific/data vis stack (scipy [contributor], numpy, matplotlib, cython, ...). Web development with Django (and Django REST), React, AngularJS.
+    \textbf{Technologies} & Git, Python scientific/data vis stack (scipy [contributor], numpy, matplotlib, cython, ...). Web development with Django (and Django REST), React+Redux, AngularJS.
 \end{longtabu}
 
 \vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Skills} & Simulations, Data Analysis, Statistics, Visualization, Linux, Python Data \& Visualization Ecosystem (numpy, scipy, pandas, dask, matplotlib, ...), Regression, Bayesian parameter estimation, HPC, Distributed Computing, VTK, Jekyll.
+    \textbf{Skills} & Agile Development, Automated Testing, Simulations, Data Analysis, Statistics, Visualization, Linux, Python Data \& Visualization Ecosystem (numpy, scipy, pandas, dask, matplotlib, ...), Regression, Bayesian parameter estimation, HPC, Distributed Computing, VTK, Jekyll.
 \end{longtabu}
 
 \vspace{-0.5cm}
@@ -251,7 +253,10 @@
     P. D. Murray, Z. Chen, D. A. Gilbert, J. Zang, T. Stückler, K. Lenz, B. B. Maranville J. Fassbender, H. Yu, J. Borchers, and K. Liu. \textbf{Poster:} \emph{Topological Hall Effect in Planar Artificial Skyrmion Lattices}. Conference on Magnetism and Magnetic Materials, Pittsburgh, PA (2017). \newline
 
     P. D. Murray, D. A. Gilbert, A. J. Grutter, A. L. Ionin, R. V. Chopdekar, A. T. N’Diaye, B. J. Kirby, B. B. Maranville, Y. Takamura, E. Arenholz, K. Liu, and J. Borchers. \textbf{Talk:} \emph{Complete Suppression of Magnetism in Gd/(La,Sr)CoO$_3$ Films via Redox Design of Oxygen Distributions}. Conference on Magnetism and Magnetic Materials, New Orleans, LA (2016). \newline
-
+\end{longtabu}
+\vspace{-0.5cm}
+\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
+    \textbf{Awards} & 3rd Place Winner, 2020 John D. Hunter Excellence in Plotting Contest. \href{https://www.youtube.com/watch?v=cBPwU2T46vw}{Entry (video)}, \href{https://github.com/peytondmurray/jdh2020}{Source repository}
 \end{longtabu}
 
 \end{document}
