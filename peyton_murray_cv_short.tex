@@ -103,7 +103,6 @@
     \bighref{https://scholar.google.com/citations?user=NXE8TDYAAAAJ\&hl=en}{\aiGoogleScholarSquare \;}
     \bighref{https://orcid.org/0000-0003-0389-0611}{\aiOrcidSquare \;}
     \bighref{https://researchgate.net/profile/Peyton_Murray}{\aiResearchGateSquare \;}
-    \bighref{https://mendeley.com/profiles/peyton-murray}{\aiMendeleySquare \;}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -112,7 +111,7 @@
 \newcommand{\contact}{
     \vspace{-0.5cm}
     \begin{longtabu} to \textwidth{X[1,l] X[1,c] X[1,r]}
-        Tel: +1 408 761 9078 & \href{https://peytondmurray.github.io}{peytondmurray.github.io} & \href{mailto:peynmurray@gmail.com}{peynmurray@gmail.com}
+        \href{tel:+14087619078}{+1 408 761 9078} & \href{https://pdmurray.dev}{pdmurray.dev} & \href{mailto:peynmurray@gmail.com}{peynmurray@gmail.com}
     \end{longtabu}
 }
 
@@ -125,12 +124,21 @@
 % Experience
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\expquansight}{
+    \textbf{Quansight}, Arcata, CA \hfill May 2021 $-$ Present \newline
+    \indsp \emph{Senior Software Engineer} \newline
+    \vspace{-2\topsep}
+    \begin{itemize}[leftmargin=1cm]
+        \item As part of the consulting branch, delivered custom-built solutions to meet a wide range of customer needs, most of which were open source contributions to upstream Python packages in the scientific Python ecosystem. In addition to being technical lead for numerous projects, I also acted as a personnel manager for a team of Quansight developers from around the globe.
+    \end{itemize}
+}
+
 \newcommand{\expvoltaiq}{
-    \textbf{Voltaiq}, Berkeley, CA \hfill Oct 2019 $-$ Present \newline
+    \textbf{Voltaiq}, Berkeley, CA \hfill Oct 2019 $-$ May 2021 \newline
     \indsp \emph{Software Engineer} \newline
     \vspace{-2\topsep}
     \begin{itemize}[leftmargin=1cm]
-        \item Developed and deployed bespoke, modern, and production-quality data analysis and visualization tools to provide quantitative insight into battery performance for some of the world's largest battery manufacturers using Django (with Django REST Framework), Plotly.js, and React.
+        \item Developed and deployed bespoke production-quality data analysis and visualization tools to provide quantitative insight into battery performance for some of the world's largest battery manufacturers using Django (with Django REST Framework), Plotly.js, and React.
     \end{itemize}
 }
 
@@ -172,7 +180,7 @@
     \indsp Advisor: Ron Olowin \newline
     \vspace{-2\topsep}
     \begin{itemize}[leftmargin=1cm]
-        \item Classified galactic and extragalactic astronomical observations as part of the Arecibo Legacy Fast-ALFA (ALFALFA) project, an international collaboration of astronomers based at the \href{https://naic.edu/ao/landing}{Arecibo Radio Observatory} in Puerto Rico.
+        \item Classified galactic and extragalactic astronomical observations as part of the Arecibo Legacy Fast-ALFA (ALFALFA) project, an international collaboration of astronomers based at the \href{https://naic.edu/}{Arecibo Radio Observatory} in Puerto Rico.
     \end{itemize}
 }
 
@@ -185,28 +193,27 @@
 \contact
 
 \vspace{-0.5cm}
-\begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Education} & University of California, Davis \hfill 2012 $-$ 2018 \newline
-    \indsp {Ph. D. Physics: Dec 2018} \newline
-    \indsp {M. S. Physics: Dec 2013} \\
-    & \\
-    & Saint Mary's College of California, Moraga \hfill 2007 $-$ 2011 \newline
-    \indsp {B. S. Physics, Minor: Mathematics, \emph{summa cum laude} (GPA: 3.873)}
+\begin{longtabu} to \textwidth{X[1] X[3] X[3]}
+    \textbf{Education} & University of California, Davis \quad 2012 $-$ 2018 & St Mary's College of California \quad 2007 $-$ 2011 \newline
+    \indsp {Ph. D. Physics: Dec 2018} & \indsp{B. S. Physics, Minor: Mathematics, \emph{summa cum laude}} \newline
+    \indsp {M. S. Physics: Dec 2013}
 \end{longtabu}
 
 \vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Computing} & Python (proficient), C++ (intermediate), Go (intermediate), Javascript (intermediate), CUDA (intermediate). Git, Python scientific/data vis stack (scipy [contributor], numpy, matplotlib, ...). Web development with Django (and Django REST), React+Redux, AngularJS.
+    \textbf{Computing} & Python (proficient), C/C++ (intermediate), Go (intermediate), Javascript (intermediate). Git, Python scientific/data vis stack (contributor to scipy, numpy, jupyter, conda, ...). Dashboarding with panel, bokeh, plotly. Web development with Django REST, React+Redux.
 \end{longtabu}
 
 \vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Skills} & Agile development, Simulations, Data Analysis, Statistics, Data Visualization, Linux, HPC (slurm), Distributed Computing, VTK, Jekyll.
+    \textbf{Skills} & Numerical methods, Simulations, Data Analysis, Statistics, Data Visualization, Linux, Agile development, HPC (slurm), Distributed Computing, VTK, Jekyll.
 \end{longtabu}
 
 \vspace{-0.5cm}
 \begin{longtabu} to \textwidth{X[\coll] X[\colr]}
-    \textbf{Research \newline\& Experience} & \expvoltaiq \\
+    \textbf{Research \newline\& Experience}
+    & \expquansight \\
+    & \expvoltaiq \\
     & \exptampere \\
     & \expucdavis \\
     & \explbl \\
