@@ -1,3 +1,4 @@
+#import "@preview/fontawesome:0.5.0": *
 #set page(margin: 1cm)
 
 #show link: it => {
@@ -10,22 +11,30 @@
   }
 }
 
-*Peyton D. Murray*
+#text(size: 22pt)[*Peyton D. Murray*]
 #h(1fr)
-#link("https://www.linkedin.com/in/peytondm/", "LinkedIn")
-#link("https://github.com/peytondmurray", "GitHub")
-#link("https://scholar.google.com/citations?user=NXE8TDYAAAAJ&hl=en", "Google Scholar")
-#link("https://orcid.org/0000-0003-0389-0611", "ORCID")
-#link("https://researchgate.net/profile/Peyton_Murray", "ResearchGate")
+#text(size: 22pt)[
+  #link("https://www.linkedin.com/in/peytondm/", [#fa-icon("linkedin", solid: true)])
+  #h(0.3em)
+  #link("https://github.com/peytondmurray", [#fa-icon("github", solid: true)])
+  #h(0.3em)
+  #link("https://scholar.google.com/citations?user=NXE8TDYAAAAJ&hl=en", [#fa-icon("google-scholar", solid: true)])
+  #h(0.3em)
+  #link("https://orcid.org/0000-0003-0389-0611", [#fa-icon("orcid", solid: true)])
+  #h(0.3em)
+  #link("https://researchgate.net/profile/Peyton_Murray", [#fa-icon("researchgate", solid: true)])
+]
 
 #line(length: 100%)
 
-#v(0.5em, weak: true)
-#link("tel:+14087619078", "+1 408 761 9078")
-#h(1fr)
-#link("https://pdmurray.dev", "pdmurray.dev")
-#h(1fr)
-#link("mailto:peynmurray@gmail.com", "peynmurray@gmail.com")
+#text(size: 14pt)[
+  #v(0.5em, weak: true)
+  #link("tel:+14087619078", "+1 408 761 9078")
+  #h(1fr)
+  #link("https://pdmurray.dev", "pdmurray.dev")
+  #h(1fr)
+  #link("mailto:peynmurray@gmail.com", "peynmurray@gmail.com")
+]
 
 #grid(
   columns: (0.15fr, 1fr),
@@ -44,10 +53,15 @@
     )
   ],
   [*Computing*], [
-    Python (proficient), C/C++ (intermediate), Go (intermediate), Javascript (intermediate). Git, Python scientific/data vis stack (contributor to `scipy`, `numpy`, `jupyter`, `conda`, ...). Dashboarding with `panel`, `bokeh`, `plotly`. Web development with FastAPI, Django REST, frontends with React.
+    Python (proficient), C/C++ (intermediate), Go (intermediate), Javascript (intermediate). Python
+    scientific/data vis stack (contributor to `scipy`, `numpy`, `jupyter`, `conda`, ...). Dashboarding
+    with `panel`, `bokeh`, `plotly`. Web development with FastAPI, Django REST, frontends with React.
+    Testing with `pytest`, `hypothesis`. Git for version control.
   ],
   [*Skills*], [
-
+    Agile Development, Automated Testing, Simulations, Continuous Integration, Data Analysis, Statistics,
+    Visualization, Linux, Python Data & Visualization Ecosystem (`numpy`, `scipy`, `pandas`, `jupyterlab`,
+    `matplotlib`, ...), Bayesian parameter estimation, HPC (`slurm`), Distributed Computing, VTK.
   ],
   [*Experience*], [
     *Quansight* · Arcata, CA
@@ -56,7 +70,7 @@
     #h(1fr)
     May 2021 - Present
 
-    - As part of Quansight's consulting branch, delivered custom-built solutions to meet a wide range of customer needs, most of which were open source contributions to upstream Python packages in the scientific Python ecosystem. In addition to being technical lead for numerous projects, I also acted as a personnel manager for a team of Quansight developers from around the globe.
+    - As part of Quansight's consulting branch, delivered custom-built solutions to meet a wide range of customer needs. Much of this work consisted of open source contributions to upstream Python packages in the scientific Python ecosystem - see my #link("https://github.com/peytondmurray", "GitHub profile") for examples of my work. In addition to being technical lead for numerous projects, I also acted as a personnel manager for a team of Quansight developers from around the globe.
   ],
   [],
   [
@@ -98,7 +112,7 @@
     #h(1fr)
     May 2011 - May 2012
 
-    - Created control software (C++ and Qt) for automated circuit testing. Hardware tested with this system was deployed as part of the #link("https://doi.org/10.1088/1748-0221/7/11/P11010", "Insertable B-Layer system") at the Large Hadron Collider in 2014.
+    - Created control software (C++, with a Qt-based GUI) for automated circuit testing. Hardware tested with this system was deployed as part of the #link("https://doi.org/10.1088/1748-0221/7/11/P11010", "Insertable B-Layer system") at the Large Hadron Collider in 2014, enabling continued studies of the Higgs boson.
   ],
   [],
   [
@@ -109,5 +123,15 @@
     Sep 2010 - May 2011
 
     - Classified astronomical data from the Arecibo Observatory as part of the #link("http://egg.astro.cornell.edu/index.php/", "ALFALFA Collaboration").
+  ],
+  [*Teaching*],
+  [
+    #emph[Teaching Assistant], *Physics Department, University of California, Davis* #h(1fr) 2012 - 2016\
+    #emph[Student Tutor and Live-In Mentor], *Dept. of Physics, St Mary's College of California* #h(1fr) 2010 - 2011
   ]
 )
+
+#v(1fr)
+#align(center)[
+  #emph[Publications, selected conferences, and laboratory skills are listed on the extended CV #link("https://github.com/peytondmurray/CV/raw/master/peyton_murray_cv.pdf", "on my website").]
+]
