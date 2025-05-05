@@ -163,7 +163,7 @@
     + Murray, P. D. et al. #link("https://doi.org/10.1021/acsami.9b18820 ", "Interfacial-Redox-Induced Tuning of Superconductivity in YBa2 Cu3 O7−δ .") ACS Applied Materials & Interfaces, 9b18820. issn: 1944-8244 (2020).
     + Karayev, S. et al. #link("https://doi.org/10.1103/PhysRevMaterials.3.041401 ", "Interlayer exchange coupling in Pt/Co/Ru and Pt/Co/Ir superlattices.") Physical Review Materials 3, 041401 (2019).
     + Rippy, G. et al. #link("https://doi.org/10.1103/PhysRevMaterials.3.082001", "X-ray nanodiffraction studies of ionically controlled nanoscale phase separation in cobaltites.") Physical Review Materials 3, 082001. issn: 2475-9953 (2019).
-    + Skaugen, A., Murray, P. D. & Laurson, L. #link("https://doi.org/10.1103/PhysRevB.100.094440", "Analytical computation of the demagnetizing energy of thin film domain walls.") 2, 1–11 (2019).
+    + Skaugen, A. et al. #link("https://doi.org/10.1103/PhysRevB.100.094440", "Analytical computation of the demagnetizing energy of thin film domain walls.") Phys. Rev. B 100, 094440 (2019).
     + Gilbert, D. A. et al. #link("https://doi.org/10.1103/PhysRevMaterials.2.104402", "Ionic tuning of cobaltites at the nanoscale.") Physical Review Materials 2, 104402 (2018).
     + Quintana, A. et al. #link("https://doi.org/10.1021/acsnano.8b05407", "Voltage-Controlled ON–OFF Ferromagnetism at Room Temperature in a Single Metal Oxide Film.") ACS Nano 12, 10291–10300 (2018).
     + De Toro, J. A. et al. #link("https://doi.org/10.1021/acs.chemmater.7b02522", "Remanence plots as a probe of spin disorder in magnetic nanoparticles.") Chemistry of Materials 29, 8258–8268 (2017).
