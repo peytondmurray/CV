@@ -70,7 +70,9 @@
     #h(1fr)
     May 2021 - Present
 
-    - As part of Quansight's consulting branch, delivered custom-built solutions to meet a wide range of customer needs. Much of this work consisted of open source contributions to upstream Python packages in the scientific Python ecosystem - see my #link("https://github.com/peytondmurray", "GitHub profile") for examples of my work. In addition to being technical lead for numerous projects, I also acted as a personnel manager for a team of Quansight developers from around the globe.
+    - As tech lead for Quansight's consulting branch, delivered custom-built solutions to meet a wide range of customer needs all the way from early stage startups to large contracts requiring corrdination across multiple teams.
+    - Much of this work focused on open source contributions to upstream Python packages, including maintenance (testing, linting, packaging, releasing, and CI/CD) and feature development for some of the largest open source projects in the Python ecosystem: `numpy`, (including C code underlying the C-API), `scipy`, `conda`, `jupyter`, and more. See my #link("https://github.com/peytondmurray", "GitHub profile") for my recent work.
+    - Acted as a personnel manager for a team of Quansight developers from around the globe, helping others to grow their engineering skills and advocating for their needs.
   ],
   [],
   [
@@ -102,7 +104,7 @@
 
     - Developed #link("https://github.com/peytondmurray/PyFORC", "PyFORC"), a Python-based suite of open source tools for analyzing and visualizing magnetic measurements using the First-Order Reversal-Curves (FORC) technique.
     - Streamlined the Liu group's material analysis pipeline by developing #link("https://github.com/peytondmurray/tarmac", "tarmac"), a Python library for quickly visualizing Markov-chain monte carlo (MCMC) samples. This library makes it simple to identify correlations between parameters in a statistical model and evaluate convergence during fitting.
-    - Fabricated and characterized a wide range of nanoscale magnetic materials, including nanoparticles, thin films, single crystals, and patterned nanostructures using a variety of cutting-edge techniques. Programmed data acquisition and instrument control software for crucial laboratory equipment.
+    - Fabricated and characterized a wide range of nanoscale magnetic materials, including nanoparticles, thin films, single crystals, and patterned nanostructures using a variety of cutting-edge techniques. Developed data acquisition and instrument control software for crucial laboratory equipment.
   ],
   [],
   [
@@ -174,9 +176,9 @@
   [*Selected Conferences*],
   [
     - P. D. Murray. Invited colloquium: Tuning Ionic Distributions for Multifunctional Materials. Tampere University, Tampere, Finland (2019).
-    - P. D. Murray, D. A. Gilbert, A. J. Grutter, B. J. Kirby, D. Hernandez-Maldonado, M. Varela, Z. E. Brubaker, R. V. Chopdekar, V. Taufour, R. Zieve, J. R. Jeffries, E. Arenholz, Y. Takamura, J. Borchers, and K. Liu. Poster: Interfacial-Redox-Induced Tuning of Superconductivity in YBa2 Cu3 O7−δ . International Conference on Magnetism and Magnetic Materials, San Francisco, CA (2018).
-    - P. D. Murray, Z. Chen, D. A. Gilbert, J. Zang, T. Stückler, K. Lenz, B. B. Maranville J. Fassbender, H. Yu, J. Borchers, and K. Liu. Poster: Topological Hall Effect in Planar Artificial Skyrmion Lattices. Conference on Magnetism and Magnetic Materials, Pittsburgh, PA (2017).
-    - P. D. Murray, D. A. Gilbert, A. J. Grutter, A. L. Ionin, R. V. Chopdekar, A. T. N’Diaye, B. J. Kirby, B. B. Maranville, Y. Takamura, E. Arenholz, K. Liu, and J. Borchers. Talk: Complete Suppression of Magnetism in Gd/(La,Sr)CoO3 Films via Redox Design of Oxygen
+    - P. D. Murray, et. al. Poster: Interfacial-Redox-Induced Tuning of Superconductivity in $#text[YBa]_2#text[Cu]_3#text[O]_(7−delta)$. International Conference on Magnetism and Magnetic Materials, San Francisco, CA (2018).
+    - P. D. Murray, et. al. Poster: Topological Hall Effect in Planar Artificial Skyrmion Lattices. Conference on Magnetism and Magnetic Materials, Pittsburgh, PA (2017).
+    - P. D. Murray, et. al. Talk: Complete Suppression of Magnetism in $#text[Gd/(La,Sr)CoO]_3$ Films via Redox Design of Oxygen
   ],
   [*Awards*],
   [
