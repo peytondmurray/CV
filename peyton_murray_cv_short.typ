@@ -1,4 +1,4 @@
-#import "@preview/fontawesome:0.5.0": *
+#import "@preview/fontawesome:0.6.0": *
 #set page(margin: 1cm)
 
 #show link: it => {
@@ -53,15 +53,18 @@
     )
   ],
   [*Computing*], [
-    Python (proficient), C/C++ (intermediate), Go (intermediate), Javascript (intermediate). Python
-    scientific/data vis stack (contributor to `scipy`, `numpy`, `jupyter`, `conda`, ...). Dashboarding
-    with `panel`, `bokeh`, `plotly`. Web development with FastAPI, Django REST, frontends with React.
-    Testing with `pytest`, `hypothesis`. Git for version control.
+    Python (proficient), C/C++ (intermediate), Go (intermediate), Javascript
+    (intermediate), Rust (intermediate). Python scientific/data vis stack (contributor
+    to `scipy`, `numpy`, `jupyter`, `conda`, ...). Dashboarding with `panel`, `bokeh`,
+    `plotly`. Web development with FastAPI, Django REST, frontends with React. Testing
+    with `pytest`, `hypothesis`. Git for version control.
   ],
   [*Skills*], [
-    Agile Development, Automated Testing, Simulations, Continuous Integration, Data Analysis, Statistics,
-    Visualization, Linux, Python Data & Visualization Ecosystem (`numpy`, `scipy`, `pandas`, `jupyterlab`,
-    `matplotlib`, ...), Bayesian parameter estimation, HPC (`slurm`), Distributed Computing, VTK.
+    Agile Development, Automated Testing, Simulations, Continuous Integration, Data
+    Analysis, Statistics, Visualization, Linux, Python Data & Visualization Ecosystem
+    (`numpy`, `scipy`, `pandas`, `jupyterlab`, `matplotlib`, ...) including coding at
+    C/Python and Rust/Python interfaces; Bayesian parameter estimation, HPC (`slurm`),
+    Distributed Computing, VTK.
   ],
   [*Experience*], [
     *Quansight* · Arcata, CA
