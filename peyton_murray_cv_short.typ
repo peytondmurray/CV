@@ -53,8 +53,7 @@
     )
   ],
   [*Computing*], [
-    Python (proficient), C/C++ (intermediate), Go (intermediate), Javascript
-    (intermediate), Rust (intermediate). Python scientific/data vis stack (contributor
+    Python, C/C++, Go, Javascript, Rust. Python scientific/data vis stack (contributor
     to `scipy`, `numpy`, `jupyter`, `conda`, ...). Dashboarding with `panel`, `bokeh`,
     `plotly`. Web development with FastAPI, Django/Sqlalchemy ORMs, frontend experience
     with JS/TS, React. Testing with `pytest`, `hypothesis`. Git for version control.
