@@ -72,7 +72,15 @@
     #h(1fr)
     May 2021 - Present
 
-    - As part of Quansight's consulting branch, delivered custom-built solutions to meet a wide range of customer needs. Much of this work consisted of open source contributions to upstream Python packages in the scientific Python ecosystem - see my #link("https://github.com/peytondmurray", "GitHub profile") for examples of my work. In addition to being technical lead for numerous projects, I also acted as a personnel manager for a team of Quansight developers from around the globe.
+    - As part of Quansight's consulting branch, delivered custom-built solutions to meet
+      a wide range of customer needs. Much of this work consisted of open source bug
+      fixes, feature development, and maintenance for critical packages in the Python
+      scientific ecosystem, including `jupyter`, `scipy`, `numpy`, `conda`, the
+      `tensorflow` ecosystem, and many smaller projects; see my
+      #link("https://github.com/peytondmurray", "GitHub profile") for examples of my work.
+      As technical lead I designed archictecture, led development, and delivered solutions
+      on time and within budget. I also acted as a personnel manager for a team of
+      developers from around the globe.
   ],
   [],
   [
@@ -82,7 +90,10 @@
     #h(1fr)
     Oct 2019 - May 2021
 
-    - Developed and deployed bespoke production-quality data analysis and visualization tools to provide quantitative insight into battery performance for some of the world's largest battery manufacturers using Django (with Django REST Framework), Plotly.js, and React.
+    - Developed and deployed bespoke production-quality data analysis and visualization
+      tools to provide quantitative insight into battery performance for some of the
+      world's largest battery manufacturers using Django (with Django REST Framework),
+      Plotly.js, and React.
   ],
   [],
   [
@@ -92,7 +103,11 @@
     #h(1fr)
     Jan 2019 - Aug 2019
 
-    - Simulated nanoscale magnetic materials on the #link("https://www.csc.fi", "CSC's") Taito-GPU supercluster using a combination of open source software and in-house code (Go, CUDA, and Python). Numerical calculations of domain wall motion were compared to an analytic model #link("https://doi.org/10.1103/PhysRevB.100.094440", "[Skaugen 2019]").
+    - Simulated nanoscale magnetic materials on the #link("https://www.csc.fi", "CSC's")
+      Taito-GPU supercluster using a combination of open source software and in-house
+      code (Go, CUDA, and Python). Numerical calculations of domain wall motion were
+      compared to an analytic model #link("https://doi.org/10.1103/PhysRevB.100.094440",
+      "[Skaugen 2019]").
   ],
   [],
   [
@@ -103,7 +118,6 @@
     Aug 2012 - Dec 2018
 
     - Developed #link("https://github.com/peytondmurray/PyFORC", "PyFORC"), a Python-based suite of open source tools for analyzing and visualizing magnetic measurements using the First-Order Reversal-Curves (FORC) technique.
-    - Streamlined the Liu group's material analysis pipeline by developing #link("https://github.com/peytondmurray/tarmac", "tarmac"), a Python library for quickly visualizing Markov-chain monte carlo (MCMC) samples. This library makes it simple to identify correlations between parameters in a statistical model and evaluate convergence during fitting.
     - Fabricated and characterized a wide range of nanoscale magnetic materials, including nanoparticles, thin films, single crystals, and patterned nanostructures using a variety of cutting-edge techniques. Programmed data acquisition and instrument control software for crucial laboratory equipment.
   ],
   [],
