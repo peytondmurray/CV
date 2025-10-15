@@ -78,7 +78,7 @@
       scientific ecosystem, including `jupyter`, `scipy`, `numpy`, `conda`, the
       `tensorflow` ecosystem, and many smaller projects; see my
       #link("https://github.com/peytondmurray", "GitHub profile") for examples of my work.
-      As technical lead I designed archictecture, led development, and delivered solutions
+      As technical lead I designed architecture, led development, and delivered solutions
       on time and within budget. I also acted as a personnel manager for a team of
       developers from around the globe.
   ],
