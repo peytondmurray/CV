@@ -75,11 +75,13 @@
     - As part of Quansight's consulting branch, delivered custom-built solutions to meet
       a wide range of customer needs. Contributed open source bug fixes, feature
       development, and maintenance for critical packages in the Python scientific ecosystem,
-      including `jupyter`, `scipy`, `numpy`, `conda`, `ray`, the `tensorflow` ecosystem,
-      and many smaller projects; see my #link("https://github.com/peytondmurray", "GitHub profile")
-      for examples of my work. As technical lead I designed architecture, led
-      development, and delivered solutions on time and within budget. Acted as a personnel
-      manager for a team of developers from around the globe.
+      including `jupyter`, `scipy`, `numpy`, `conda`, `ray`, the `tensorflow` ecosystem, and
+      many smaller projects; see my #link("https://github.com/peytondmurray", "GitHub profile")
+      for examples of my work. Contributions included Python code in addition to
+      C/C++ and Rust for performance-critical and resource constrained applications. As
+      technical lead I designed architecture, led development, and delivered solutions on
+      time and within budget. Acted as a personnel manager, mentoring and advocating for a
+      team of developers from around the globe.
   ],
   [],
   [
