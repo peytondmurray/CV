@@ -46,7 +46,7 @@
     Development
   ],
   [*Languages*], [
-    Python, Typescript, Go, C/C++, Rust
+    Python, Go, C/C++, Rust, Typescript
   ],
   [*Frameworks & Tools*], [
     CI/CD (GitHub Actions), FastAPI, Django, React, PostgreSQL, Pytest, Python
