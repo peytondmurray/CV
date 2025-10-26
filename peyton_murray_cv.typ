@@ -40,6 +40,7 @@
   columns: (0.15fr, 1fr),
   stroke: none,
   gutter: 1em,
+
   [*Skills*], [
     Open-Source Leadership, Scientific Computing, Data Visualization, Full-Stack
     Development
@@ -61,7 +62,7 @@
     - Backend open-source engineer in Quansight's consulting branch. Contributed open
       source bug fixes, feature development, and maintenance for large and critical
       packages in the Python scientific ecosystem, including `jupyter`, `scipy`, `numpy`,
-      `conda`, ecosystem and many smaller projects. Reduced `ray`'s CI documentation build
+      `conda`, and many smaller projects. Reduced `ray`'s CI documentation build
       time (\~1hr) by 50%, and automated building, linting, publishing, and testing for
       the `tensorflow` ecosystem with \~40 CI/CD workflows
     - Built and released Python code in addition to C/C++ and Rust for
