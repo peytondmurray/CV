@@ -96,7 +96,7 @@
     #h(1fr)
     Jan 2019 - Aug 2019
 
-    - Developed 3D voronoi tesselation and performance improvements for an
+    - Developed 3D voronoi tessellation and performance improvements for an
       #link("https://github.com/mumax/3", "open-source magnetics simulation engine")
       using Go and CUDA C.
     - Scaled simulations by automating simulation configuration and parallelizing across
