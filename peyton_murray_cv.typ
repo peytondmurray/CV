@@ -11,7 +11,7 @@
   }
 }
 
-#text(size: 22pt)[*Peyton D. Murray*]
+#text(size: 22pt)[*Peyton D. Murray, Ph. D.*]
 #h(1fr)
 #text(size: 22pt)[
   #link("https://www.linkedin.com/in/peytondm/", [#fa-icon("linkedin", solid: true)])
@@ -99,8 +99,8 @@
     - Developed 3D voronoi tessellation and performance improvements for an
       #link("https://github.com/mumax/3", "open-source magnetics simulation engine")
       using Go and CUDA C.
-    - Scaled simulations by automating simulation configuration and parallelizing across
-      a #link("https://www.csc.fi", "GPU cluster") using SLURM.
+    - Scaled simulations by automating configuration and parallelizing across a
+      #link("https://www.csc.fi", "GPU cluster") using SLURM.
   ],
   [],
   [
