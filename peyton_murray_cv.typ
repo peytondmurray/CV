@@ -59,6 +59,11 @@
     #h(1fr)
     May 2021 - Present
 
+    - Led design and delivery for open source contracts as tech lead for teams of 5-10
+      engineers on projects used by millions of developers, including NumPy, SciPy,
+      Jupyter, Ray, TensorFlow. Delivered all contracts on schedule and within budget.
+    - Mentored and advocated for a global team of junior engineers; managed multiple
+      open-source contracts simultaneously.
     - Backend open-source engineer in Quansight's consulting branch. Contributed open
       source bug fixes, feature development, and maintenance for large and critical
       packages in the Python scientific ecosystem, including `jupyter`, `scipy`, `numpy`,
@@ -68,11 +73,6 @@
       \~40 CI/CD workflows spread across multiple projects.
     - Built and released Python code in addition to C/C++ and Rust for
       performance-critical applications.
-    - Led design and delivery for open source contracts as tech lead for teams of 5-10
-      engineers on projects used by millions of developers, including NumPy, SciPy,
-      Jupyter, Ray, TensorFlow. Delivered all contracts on schedule and within budget.
-    - Mentored and advocated for a global team of junior engineers; managed multiple
-      open-source contracts simultaneously.
 
   ],
   [],
