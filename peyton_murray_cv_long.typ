@@ -53,7 +53,7 @@
     scientific ecosystem, Meson
   ],
   [*Experience*], [
-    *Quansight*
+    *OpenTeams (formerly Quansight)*
     #h(2em)
     #emph[Senior Software Engineer]
     #h(1fr)
