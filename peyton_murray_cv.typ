@@ -155,5 +155,5 @@
 
 #v(1fr)
 #align(center)[
-  #emph[Publications, selected conferences, and laboratory skills are listed on the extended CV #link("https://github.com/peytondmurray/CV/raw/master/peyton_murray_cv.pdf", "on my website").]
+  #emph[Publications, selected conferences, and laboratory skills are listed on the extended CV #link("https://raw.githubusercontent.com/peytondmurray/CV/main/peyton_murray_cv_long.pdf", "on my website").]
 ]
