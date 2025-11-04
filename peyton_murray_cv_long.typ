@@ -60,14 +60,15 @@
     May 2021 - Present
 
     - Led design and delivery for open source contracts as tech lead for teams of 5-10
-      engineers on projects used by millions of developers, including NumPy, SciPy,
-      Jupyter, Ray, TensorFlow. Delivered all contracts on schedule and within budget.
+      engineers on contracts as large as \~\$1M, providing open-source consulting
+      services for foundational packages in the Python scientific ecosystem. Delivered
+      all contracts on schedule and within budget.
     - Mentored and advocated for a global team of junior engineers; managed multiple
       open-source contracts simultaneously.
-    - Backend open-source engineer in Quansight's consulting branch. Contributed open
-      source bug fixes, feature development, and maintenance for large and critical
-      packages in the Python scientific ecosystem, including `jupyter`, `scipy`, `numpy`,
-      `conda`, and many smaller projects.
+    - As an individual contributor I developed bug fixes, features, accessibility
+      enhancements, performance optimizations, tests, improved observability, CI/CD, and
+      project maintenance for `jupyter`, `scipy`, `numpy`, `conda`, `ray`, `tensorflow`,
+      and many smaller projects used by millions of Python developers.
     - Reduced `ray`'s CI documentation build time (\~1hr) by 50%, and automated the
       building, linting, publishing, and testing of the `tensorflow` ecosystem with
       \~40 CI/CD workflows spread across multiple projects.
@@ -83,10 +84,12 @@
     #h(1fr)
     Oct 2019 - May 2021
 
-    - Developed, deployed, and maintained a SAAS data analytics platform for the world's
-      largest battery manufacturers and consumers.
+    - Developed, deployed, maintained, and supported production deployments for a SAAS
+      data analytics platform for the world's largest battery manufacturers and
+      consumers.
     - Built REST APIs (Python, Django, PostgreSQL) and React dashboards with Plotly.js
       for data visualization.
+
   ],
   [],
   [
@@ -98,9 +101,11 @@
 
     - Developed 3D voronoi tessellation and performance improvements for an
       #link("https://github.com/mumax/3", "open-source magnetics simulation engine")
-      using Go and CUDA C.
+      using Go and CUDA C, improving materials research for thousands of top magnetics
+      scientists.
     - Scaled simulations by automating configuration and parallelizing across a
       #link("https://www.csc.fi", "GPU cluster") using SLURM.
+
   ],
   [],
   [
