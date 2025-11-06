@@ -117,6 +117,8 @@
 
     - Developed open source Python tools for analyzing and plotting magnetic
       measurements and MCMC sample analysis.
+    - Implemented a Savitzky-Golay filter to cut processing times for magnetic
+      measurement data from 15 minutes to \<1 second.
   ],
   [],
   [
