@@ -69,11 +69,12 @@
       enhancements, performance optimizations, tests, improved observability, CI/CD, and
       project maintenance for `jupyter`, `scipy`, `numpy`, `conda`, `ray`, `tensorflow`,
       and many smaller projects used by millions of Python developers.
-    - Reduced `ray`'s CI documentation build time (\~1hr) by 50%, and automated the
-      building, linting, publishing, and testing of the `tensorflow` ecosystem with
-      \~40 CI/CD workflows spread across multiple projects.
-    - Built and released Python code in addition to C/C++ and Rust for
-      performance-critical applications.
+    - Refactored legacy NumPy C code to take advantage of modern C++ features, avoiding
+      the need for arcane preprocessor macros and the legacy template generation system
+      for UTF-8 string arrays.
+    - Reduced `ray`'s CI documentation build time (\~1hr) by 50%; automated
+      building, linting, publishing, and testing of the `tensorflow` ecosystem with \~40
+      CI/CD workflows across multiple projects.
 
   ],
   [],
