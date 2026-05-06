@@ -41,16 +41,10 @@
   stroke: none,
   gutter: 1em,
 
-  [*Skills*], [
-    Open-Source Leadership, Scientific Computing, Data Visualization, Full-Stack
-    Development
-  ],
-  [*Languages*], [
-    Python, Go, C/C++, Rust, Typescript
-  ],
-  [*Frameworks & Tools*], [
-    CI/CD (GitHub Actions), FastAPI, Django, React, PostgreSQL, Pytest, Python
-    scientific ecosystem, Meson
+  [*Languages, Frameworks, and Tools*], [
+    Python, Go, Rust, C/C++, SQL, Typescript, Javascript, Django, FastAPI, PostgreSQL,
+    REST APIs, CI/CD (GitHub Actions), Docker, SLURM, Git, Linux, Pytest, React, Meson,
+    CUDA C
   ],
   [*Experience*], [
     *OpenTeams (formerly Quansight)*
@@ -59,21 +53,21 @@
     #h(1fr)
     May 2021 - Present
 
-    - Led design and delivery for open source contracts as tech lead for teams of 5-10
-      engineers on contracts as large as \~\$1M, providing open-source consulting
-      services for foundational packages in the Python scientific ecosystem. Delivered
-      all contracts on schedule and within budget.
-    - Mentored and advocated for a global team of junior engineers; managed multiple
-      open-source contracts simultaneously.
-    - As an individual contributor I developed bug fixes, features, accessibility
-      enhancements, performance optimizations, tests, improved observability, CI/CD, and
-      project maintenance for `jupyter`, `scipy`, `numpy`, `conda`, `ray`, `tensorflow`,
-      and many smaller projects used by millions of Python developers.
-    - Reduced `ray`'s CI documentation build time (\~1hr) by 50%, and automated the
-      building, linting, publishing, and testing of the `tensorflow` ecosystem with
-      \~40 CI/CD workflows spread across multiple projects.
-    - Built and released Python code in addition to C/C++ and Rust for
-      performance-critical applications.
+    - Led technical architecture and delivery as tech lead for distributed teams of
+      5-10 engineers on contracts up to \~\$1M. Delivered all projects on schedule and
+      within budget.
+    - Engineered performance-critical backend systems in Python, C/C++, and Rust for
+      packages used by millions of developers (`scipy`, `numpy`, `ray`, `tensorflow`,
+      `jupyter`, `conda`).
+    - Reduced CI build times by 50% for `ray` documentation through caching
+      optimizations and parallelization strategies, reducing compute costs and improving
+      code throughput.
+    - Designed and implemented \~40 CI/CD workflows using GitHub Actions across the
+      `tensorflow` ecosystem, automating build, test, lint, and publishing pipelines.
+    - Optimized database queries and API endpoints for improved observability and
+      performance; implemented comprehensive test suites using Pytest.
+    - Mentored junior engineers on distributed teams; conducted code reviews and
+      established engineering best practices.
 
   ],
   [],
@@ -84,41 +78,48 @@
     #h(1fr)
     Oct 2019 - May 2021
 
-    - Developed, deployed, maintained, and supported production deployments for a SAAS
-      data analytics platform for the world's largest battery manufacturers and
-      consumers.
-    - Built REST APIs (Python, Django, PostgreSQL) and React dashboards with Plotly.js
-      for data visualization.
+    - Developed and maintained production SAAS data analytics platform serving Fortune
+      500 battery manufacturers; owned full-stack features from database schema to API
+      to frontend.
+    - Built scalable REST APIs using Python, Django and PostgreSQL.
+    - Designed database schemas and implemented migrations for multi-tenant
+      architecture; ensured data integrity and security compliance.
+    - Deployed and monitored production services; resolved incidents and provided
+      customer support for enterprise clients.
+    - Built data analytics frontend using React, Plotly.js, and
+      HTML/CSS/Javascript/Typescript
 
   ],
   [],
   [
     *Tampere University*
     #h(2em)
-    #emph[Postdoctoral Scholar]
+    #emph[Research Software Engineer]
     #h(1fr)
     Jan 2019 - Aug 2019
 
-    - Developed 3D voronoi tessellation and performance improvements for an
-      #link("https://github.com/mumax/3", "open-source magnetics simulation engine")
-      using Go and CUDA C, improving materials research for thousands of top magnetics
-      scientists.
-    - Scaled simulations by automating configuration and parallelizing across a
-      #link("https://www.csc.fi", "GPU cluster") using SLURM.
+    - Made performance optimizations and 3D spatial algorithms for an
+      #link("https://github.com/mumax/3", "open-source physics engine")
+      using Go, CUDA C, and Python
+    - Designed job orchestration system to parallelize GPU-accelerated simulations
+      across HPC cluster using SLURM; automated job configuration and resource
+      allocation.
 
   ],
   [],
   [
-    *UC Davis Department of Physics*
-    #h(1em)
-    #emph[Graduate Student Researcher]
+    *UC Davis*
+    #h(2em)
+    #emph[Graduate Student Researcher & Engineer]
     #h(1fr)
     Aug 2012 - Dec 2018
 
-    - Developed open source Python tools for analyzing and plotting magnetic
-      measurements and MCMC sample analysis.
-    - Implemented a Savitzky-Golay filter to cut processing times for magnetic
-      measurement data from 15 minutes to \<1 second.
+    - Built open-source Python data processing pipeline for scientific analysis;
+      implemented signal processing algorithms (Savitzky-Golay filtering) that reduced
+      data processing time by 900x.
+    - Developed MCMC statistical analysis tools for large-scale data modeling and
+      visualization.
+
   ],
   [],
   [
@@ -128,10 +129,12 @@
     #h(1fr)
     May 2011 - May 2012
 
-    - Developed control software (C++ and Qt) for automated circuit testing. Hardware
-      tested with this system was deployed as part of the
-      #link("https://doi.org/10.1088/1748-0221/7/11/P11010", "Insertable B-Layer system") at
-      the Large Hadron Collider in 2014, enabling continued studies of the Higgs boson.
+    - Developed automated hardware testing software in C++ and Qt for high-reliability
+      systems; implemented control systems and data acquisition for physics
+      instrumentation.
+    - System deployed to #link("https://doi.org/10.1088/1748-0221/7/11/P11010",
+      "production environment at CERN's Large Hadron Collider") in 2014.
+
   ],
   [*Education*], [
     #grid(
@@ -144,10 +147,9 @@
       [St Mary's College of California: B.S. Physics, Minor: Mathematics], [2007 - 2011],
     )
   ],
-  [*Teaching*],
+  [*Open Source Contributions*],
   [
-    #emph[Teaching Assistant], *Physics Department, University of California, Davis* #h(1fr) 2012 - 2016\
-    #emph[Student Tutor and Live-In Mentor], *Dept. of Physics, St Mary's College of California* #h(1fr) 2010 - 2011
+    Core contributor to foundational Python packages: `scipy`, `numpy`, `ray`, `tensorflow`, `jupyter`, `conda`, and many others. Full contribution history: #link("https://github.com/peytondmurray", "github.com/peytondmurray")
   ],
   [*Awards*],
   [
