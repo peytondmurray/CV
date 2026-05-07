@@ -44,7 +44,7 @@
   [*Languages, Frameworks, and Tools*], [
     Python, Go, Rust, C/C++, SQL, Typescript, Javascript, Django, FastAPI, PostgreSQL,
     REST APIs, CI/CD (GitHub Actions), Docker, SLURM, Git, Linux, Pytest, React, Meson,
-    CUDA C
+    CUDA C, Web Assembly/Wasm, Emscripten
   ],
   [*Experience*], [
     *OpenTeams (formerly Quansight)*
