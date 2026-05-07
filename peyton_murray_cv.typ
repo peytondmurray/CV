@@ -41,12 +41,15 @@
   stroke: none,
   gutter: 1em,
 
-  [*Languages, Frameworks, and Tools*], [
-    Python, Go, Rust, C/C++, SQL, Typescript, Javascript, Django, FastAPI, PostgreSQL,
-    REST APIs, CI/CD (GitHub Actions), Docker, SLURM, Git, Linux, Pytest, React, Meson,
-    CUDA C, Web Assembly/Wasm, Emscripten
+  [*Languages, Frameworks, and Tools*],
+  [
+    Python, Go, Rust, C/C++, SQL, HTML, CSS, Typescript, Javascript, Django, FastAPI,
+    PostgreSQL, REST APIs, CI/CD (GitHub Actions), Docker, SLURM, Git, Linux, Pytest,
+    React, Meson, CUDA C, Web Assembly/Wasm, Emscripten
   ],
-  [*Experience*], [
+
+  [*Experience*],
+  [
     *OpenTeams (formerly Quansight)*
     #h(2em)
     #emph[Senior Software Engineer]
@@ -70,6 +73,7 @@
       established engineering best practices.
 
   ],
+
   [],
   [
     *Voltaiq*
@@ -90,6 +94,7 @@
       HTML/CSS/Javascript/Typescript
 
   ],
+
   [],
   [
     *Tampere University*
@@ -106,6 +111,7 @@
       allocation.
 
   ],
+
   [],
   [
     *UC Davis*
@@ -121,6 +127,7 @@
       visualization.
 
   ],
+
   [],
   [
     *Lawrence Berkeley National Laboratory*
@@ -132,11 +139,12 @@
     - Developed automated hardware testing software in C++ and Qt for high-reliability
       systems; implemented control systems and data acquisition for physics
       instrumentation.
-    - System deployed to #link("https://doi.org/10.1088/1748-0221/7/11/P11010",
-      "production environment at CERN's Large Hadron Collider") in 2014.
+    - System deployed to #link("https://doi.org/10.1088/1748-0221/7/11/P11010", "production environment at CERN's Large Hadron Collider") in 2014.
 
   ],
-  [*Education*], [
+
+  [*Education*],
+  [
     #grid(
       columns: (2fr, 1fr),
       stroke: none,
@@ -147,10 +155,12 @@
       [St Mary's College of California: B.S. Physics, Minor: Mathematics], [2007 - 2011],
     )
   ],
+
   [*Open Source Contributions*],
   [
     Core contributor to foundational Python packages: `scipy`, `numpy`, `ray`, `tensorflow`, `jupyter`, `conda`, and many others. Full contribution history: #link("https://github.com/peytondmurray", "github.com/peytondmurray")
   ],
+
   [*Awards*],
   [
     3rd Place Winner, 2020 John D. Hunter Excellence in Plotting Contest. #link("https://www.youtube.com/watch?v=cBPwU2T46vw", "Entry (video)"), #link("https://github.com/peytondmurray/jdh2020", "Source repository")
